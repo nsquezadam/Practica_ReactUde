@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom';
 import Usuario from  './componentes/Usuario'
 import FomularioInicioSesion from './componentes/FomularioInicioSesion'
 //import ContadorClass from './componentes/ContadorClass';
-import ContadorFuncional from './componentes/ContadorFuncional'
+//import ContadorFuncional from './componentes/ContadorFuncional'
+import Boton from './elementos/Boton'
+import EjemploUseReducer  from './componentes/EjemploUseReducer'
+import Blog from './componentes/Blog'
 
 import "./index.css"
 
@@ -23,8 +26,11 @@ return (
 <div>
   <Usuario/> 
   {/* <ContadorClass cantIncrementar={5} cantDiminuir={3} /> */}
-  <ContadorFuncional cantIncr={3} cantDism={4} /> 
-  <button onClick={()=> cambiarEstadoSesion(false)} >Cerrar Sesion</button>
+  {/* <ContadorFuncional cantIncr={3} cantDism={4} />  */}
+  <Blog/>
+  <EjemploUseReducer />
+  {/* <button onClick={()=> cambiarEstadoSesion(false)} >Cerrar Sesion</button> */}
+    <Boton  largo marginTop  onClick={()=> cambiarEstadoSesion(false)}>Cerrar Sesion</Boton>
   </div>
   :
   <div>

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import styles from './formularioInicioSesion.module.css'
+import Boton from '../elementos/Boton'
+
 
 const FormularioInicioSesion = (props) => {
   const [usuario, cambiarUsuario]= useState('')
@@ -30,7 +32,7 @@ const FormularioInicioSesion = (props) => {
   const onSubmit = (e) => {
     e.preventDefault();
     // alert('datos enviaron')
-    if(usuario === 'carlos' && password === '123'){
+    if(usuario === 'Naty' && password === '123'){
       // alert('datos correctos')
       props.cambiarEstadoSesion(true)
     }else{
@@ -69,7 +71,10 @@ const FormularioInicioSesion = (props) => {
           onChange={onChange}
           className="input"/>
       </div>
-      <button  type="submit"className={styles.boton} >Iniciar sesion </button> 
+      {/* <button  type="submit"className={styles.boton} >Iniciar sesion </button>  */}
+      <div>
+        <Boton largo type="submit">Iniciar Sesion</Boton>
+      </div>
     </form>
   ); 
 }
